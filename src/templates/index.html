@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+{% include "components/notificacion.html" %}
+<div class="container mx-auto mb-4 p-4">
+    <div class="collapse collapse-arrow bg-base-200 mb-4">
+        <input type="radio" name="opcionesAcordeon" checked="checked"/>
+        <div class="collapse-title text-xl font-bold">
+            Datos de entrada
+        </div>
+        <div class="collapse-content">
+            {% include "components/seccion_entrada.html" %}
+        </div>
+    </div>
+
+    <div class="collapse collapse-arrow bg-base-200 mb-4">
+        <input type="radio" name="opcionesAcordeon" />
+        <div class="collapse-title text-xl font-bold">
+            Tabla de transición
+        </div>
+        <div class="collapse-content">
+            {% include "components/seccion_tabla.html" %}
+        </div>
+    </div>
+
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="opcionesAcordeon"/>
+        <div class="collapse-title text-xl font-bold">
+            Diagrama
+        </div>
+        <div class="collapse-content">
+            {% include "components/seccion_diagrama.html" %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

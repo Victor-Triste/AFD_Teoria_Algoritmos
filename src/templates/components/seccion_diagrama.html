@@ -1,0 +1,43 @@
+<div class="container grid grid-cols-2 bg-slate-400 dark:bg-transparent p-2 rounded-lg border">
+    <div class="container">
+        <div class="form-control w-full max-w-xs">
+            <label class="label">
+                <span class="label-text">Ingrese una cadena</span>
+            </label>
+            <input type="text" id="cadena_prueba" name="cadena_prueba"
+                placeholder="Digite caracteres del alfabeto del ADF"
+                class="input input-bordered w-full max-w-xs"
+                oninput="checkAlphabet(this)" />
+        </div>
+        <div class="p-3">
+            <button id="btn_test_string" class="btn btn-primary"
+                onclick="evaluateString()">
+                Evaluar
+            </button>
+        </div>
+    </div>
+    <div class="container m-auto">
+        <h1 class="font-mono font-semibold text-center p-2">Simbología</h1>
+        <table class="table-auto flex justify-center">
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">Nodo inicial</td>
+                    <td class="border px-4 py-2 bg-[#00dcdc]"></td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Nodo final</td>
+                    <td class="border px-4 py-2 bg-[#03c700]"></td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Nodo inicial y final</td>
+                    <td class="border px-4 py-2 bg-[#17a589]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="grafo" class="container w-full h-80 overflow-auto flex justify-center">
+    <span id="notify_graph_empty"
+        class="m-auto flex justify-center font-semibold text-lg">Aquí se
+        mostrará el grafo resultante de los datos ingresados ⬇️</span>
+</div>

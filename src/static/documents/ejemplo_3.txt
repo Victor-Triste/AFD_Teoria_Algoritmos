@@ -1,0 +1,29 @@
+// Modificar después de los signos "=" o dentro de los "{" "}".
+// En las transiciones, Ocupar una línea por cada transición y asignarle a cual le pertenece: δ(nodo_origen, alfabeto).
+
+Nodos(Q) = 1,2,3,4,5,6,7,8,9,10
+Alfabeto(Σ) = a,b
+Nodo inicio(q0) = 1
+Nodo(s) final(es) = 10
+
+//escribir las transiciones, una por cada línea y en orden:
+1
+1
+6
+4
+2 
+7
+2
+5
+2
+10
+8
+7
+8
+3
+7
+9
+8
+10
+8
+6

@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  web:
+    container_name: nodeDockerApp
+    build: .
+  
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./D:/Programming_projects/Python/automatas_finitos_deterministas:/home/pn/app 

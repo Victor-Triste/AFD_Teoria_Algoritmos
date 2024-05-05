@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="container">
+        <h1 class="text-center font-semibold m-3">
+            --- Cargar datos desde un archivo TXT ---
+        </h1>
+        <div class="grid grid-cols-2">
+            <input
+                type="file"
+                class="file-input file-input-bordered file-input-primary w-full max-w-xs" accept=".txt" id="input_file_select" onchange="handleFileSelect(event)" />
+            <div class="flex justify-center">
+                <button class="btn btn-primary" onclick="descargarArchivo()">
+                    Descargar formato
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-6">
+        <h1 class="text-center font-semibold m-3">
+            --- O desde el siguiente formulario ---
+        </h1>
+        <div
+            class="container grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Ingrese los nodos (Q)</span>
+                </label>
+                <input
+                    type="text"
+                    id="num_nodos"
+                    name="num_nodos"
+                    placeholder="ej. q0,q1,q2,q3"
+                    class="input input-bordered w-full max-w-xs"
+                    oninput="this.value = this.value.toLowerCase()" />
+            </div>
+
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Ingrese el alfabeto (Σ)</span>
+                </label>
+                <input
+                    type="text"
+                    id="alfabeto"
+                    name="alfabeto"
+                    placeholder="Ej. 1,2,3"
+                    class="input input-bordered w-full max-w-xs"
+                    oninput="this.value = this.value.toUpperCase()" />
+            </div>
+
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Ingrese el nodo inicial (q0)</span>
+                </label>
+                <input
+                    type="text"
+                    id="nodo_inicial"
+                    name="nodo_inicial"
+                    placeholder="ej. q0"
+                    class="input input-bordered w-full max-w-xs"
+                    oninput="this.value = this.value.toLowerCase()" />
+            </div>
+
+            <div class="form-control w-full max-w-xs">
+                <label class="label">
+                    <span class="label-text">Ingrese el/los nodo(s) final(es)
+                        (F)</span>
+                </label>
+                <input
+                    type="text"
+                    id="nodos_finales"
+                    name="nodos_finales"
+                    placeholder="ej. q0"
+                    class="input input-bordered w-full max-w-xs"
+                    oninput="this.value = this.value.toLowerCase()" />
+            </div>
+        </div>
+        <div class="flex justify-center p-3">
+            <button class="btn btn-primary" onclick="generateTransitions()">
+                Generar transiciones
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-4">
+    <h1 class="text-xl text-center">Transiciones</h1>
+    <div
+        class="container grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"
+        id="content_transitions"></div>
+    <div class="flex justify-center p-3">
+        <button class="btn btn-primary" id="btn_processing_data"
+            onclick="generateResults()">
+            Procesar datos
+        </button>
+    </div>
+</div>

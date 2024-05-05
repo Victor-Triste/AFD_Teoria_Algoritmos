@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Autómatas finitos deterministas</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
+    <script src="{{ url_for('static', filename='js/go.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js')}}" defer></script>
+  </head>
+  <body class="bg-gray-400 text-black dark:bg-gray-950 dark:text-white">
+    <div class="navbar bg-base-100 sticky top-0 z-50">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl">Autómatas Finitos Deterministas</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>¿Cómo usar?</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {% block content %} 
+    {% endblock content %}
+
+    <footer class="footer flex justify-center p-4 bg-neutral text-neutral-content">
+      <p>Derechos Reservados 2023 - Victor Triste Pérez</p>
+    </footer>
+  </body>
+</html>
